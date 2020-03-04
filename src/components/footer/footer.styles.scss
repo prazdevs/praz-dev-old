@@ -1,0 +1,24 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $margins;
+
+  .footer-copyright {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links {
+    font-size: 1.7rem;
+    display: flex;
+
+    .link {
+      margin: 0 $padding;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

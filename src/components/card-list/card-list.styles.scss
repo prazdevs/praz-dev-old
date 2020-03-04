@@ -1,0 +1,15 @@
+.card-list {
+  margin: $margins 0;
+
+  .card-list-title {
+    margin-top: $margins;
+    margin-left: $margins;
+    display: flex;
+
+    .icon-bullet {
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

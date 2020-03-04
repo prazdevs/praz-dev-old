@@ -1,0 +1,23 @@
+.tag-container {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  margin-right: 5px;
+  font-size: 0.9rem;
+  font-style: italic;
+  border-radius: 5px;
+
+  &.clickable {
+    cursor: pointer;
+  }
+
+  &.selected {
+    background-color: $alternate-background;
+    color: $primary-color;
+  }
+
+  .icon {
+    margin-top: 5px;
+    margin-right: 0.3rem;
+  }
+}

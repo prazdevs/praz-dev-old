@@ -1,0 +1,104 @@
+.project-container {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+  color: $font-color;
+  margin: $margins 0;
+
+  a {
+    color: white;
+  }
+
+  .github-link {
+    align-self: flex-end;
+    display: flex;
+
+    .icon {
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .project-meta {
+    .project-thumbnail {
+      display: none;
+
+      .grayscale {
+        filter: grayscale(100%);
+      }
+    }
+
+    .project-data {
+      .project-title {
+        margin: 0;
+      }
+
+      .project-maintenance {
+        font-weight: bold;
+
+        .state {
+          display: flex;
+
+          .icon {
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 7px 0;
+      }
+    }
+  }
+
+  .project-content {
+    margin-top: $padding;
+  }
+
+  &:hover {
+    background-color: $alternate-background;
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .project-title {
+      color: $primary-color;
+    }
+
+    .project-data {
+      .project-maintenance {
+        .maintained {
+          color: seagreen;
+        }
+        .discontinued {
+          color: indianred;
+        }
+      }
+    }
+  }
+}
+
+@include small-breakpoint {
+  .project-container {
+    .project-meta {
+      display: flex;
+      align-items: center;
+
+      .project-thumbnail {
+        display: flex !important;
+        margin-right: $padding;
+      }
+    }
+  }
+}

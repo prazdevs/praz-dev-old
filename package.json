@@ -1,0 +1,59 @@
+{
+  "name": "praz.dev",
+  "description": "My personal dev blog, with JavaScript and stuff...",
+  "version": "1.0.0",
+  "author": "Sacha 'PraZ' Bouillez",
+  "dependencies": {
+    "gatsby": "^2.19.7",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-sitemap": "^2.2.27",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^3.1.44",
+    "gatsby-remark-prismjs": "^3.3.31",
+    "gatsby-remark-reading-time": "^1.1.0",
+    "gatsby-remark-smartypants": "^2.1.21",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.50",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "node-sass": "^4.13.1",
+    "prismjs": "^1.19.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-typed": "^1.2.0",
+    "typeface-caveat": "^0.0.76",
+    "typeface-fira-code": "^1.1.4",
+    "typeface-handlee": "^0.0.72",
+    "typeface-quicksand": "^1.1.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby",
+    "praz",
+    "praz.dev",
+    "Sacha Bouillez",
+    "dev",
+    "blog"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prazdevs/"
+  }
+}

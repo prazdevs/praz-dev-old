@@ -1,0 +1,53 @@
+.post-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $margins;
+
+  .post-title {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header-container {
+    max-width: 600px;
+    width: 100%;
+
+    .post-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .meta-element {
+        display: flex;
+        align-items: center;
+        .icon {
+          display: flex;
+          align-items: center;
+          margin-right: 7px;
+        }
+      }
+    }
+
+    .header-thumbnail {
+      margin: 5px 0;
+    }
+  }
+}
+
+@include small-breakpoint {
+  .post-header {
+    .header-container {
+      .post-meta {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5px 5px;
+      }
+    }
+  }
+}

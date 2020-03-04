@@ -1,0 +1,14 @@
+.about-container {
+  font-family: 'Handlee';
+  font-size: 1.5rem;
+  margin: $padding;
+  strong {
+    color: $primary-color;
+  }
+}
+
+@include small-breakpoint {
+  .about-container {
+    margin: $margins;
+  }
+}
