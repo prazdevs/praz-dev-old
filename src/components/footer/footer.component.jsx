@@ -4,18 +4,8 @@ import React from 'react';
 const Footer = () => (
   <footer className="footer-container">
     <div className="footer-copyright">
-      <span>© {new Date().getFullYear()} — PraZ</span>
-      <div>
-        <Link to="credits">Credits</Link>
-        {`  •  `}
-        <a
-          href="https://praz.dev/sitemap.xml"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sitemap
-        </a>
-      </div>
+      <span className="copyright">© {new Date().getFullYear()} — PraZ • </span>
+      <Link to="credits">Credits</Link>
     </div>
     <div className="links">
       <a
