@@ -118,7 +118,7 @@ I eventually came acrosss a framework called NestJS, an opinionated Typescript-b
 
 ### So what ?
 
-To be honest, I do not want to convert people into using JavaScript. I wanna go further than this: "never judge a book by its cover" is as true as "never judge a language by its reputation". Make your own mind, try things, experiment and learn. Do not let prejudices hold you back, because you may miss out. You may still hate what you tried, but you now have valid reasons not to like it. I will end that post with Atwood's Law :
+To be honest, I do not want to convert people into using JavaScript. I wanna go further than this: "never judge a book by its cover" is as true as "never judge a language by its reputation". Make up your own mind, try things, experiment and learn. Do not let prejudices hold you back as you may miss out. You may still hate what you tried, but you now have valid reasons not to like it. I will end that post with Atwood's Law :
 
 > "Any application that can be written in JavaScript, will eventually be written in JavaScript."
 > <cite>-- Jeff Atwood</cite>
