@@ -1,6 +1,6 @@
 ---
 title: Abstract commands in a Discord bot with Typescript
-category: blog
+category: blog-temp
 date: 2020-08-21
 thumbnail: ../images/thumbnail.jpg
 tags: [TypeScript, NodeJs]

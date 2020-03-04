@@ -5,7 +5,7 @@ import Tag from '../tag/tag.component';
 const TagFilter = ({ tags, handleTagClick }) => {
   return (
     <div className="tag-filter-container">
-      <span>Only looking for specific content/technology ?</span>
+      <span>Only looking for specific content ?</span>
       <div className="tag-filter">
         {tags.map(tag => (
           <div

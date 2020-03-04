@@ -8,7 +8,13 @@ const Footer = () => (
       <div>
         <Link to="credits">Credits</Link>
         {`  •  `}
-        <Link to="sitemap.xml">Sitemap</Link>
+        <a
+          href="https://praz.dev/sitemap.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sitemap
+        </a>
       </div>
     </div>
     <div className="links">
