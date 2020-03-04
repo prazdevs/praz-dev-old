@@ -11,11 +11,11 @@ My mother used to tell me: "only fools never change their mind". Well, mother kn
 > "JavaScript is the world's most misunderstood programming language."  
 > <cite>-- Douglas Crockford</cite>
 
-This was probably my mistake, and a lot of people's as well. I was still learning and enjoying Java then C#, why would I need another language that is unsafe, random and inconsistent? Yeah... Time to talk about prejudices. The prejudices that kept me away from what we call "modern JavaScript" and its remarkable ecosystem.
+This was probably my mistake, and a lot of others' as well. I was still learning and enjoying Java, and then C#, why would I need another language that is unsafe, random and inconsistent? Yeah... it's time to talk about prejudices. The prejudices that kept me away from what we call "modern JavaScript" and its remarkable ecosystem.
 
 ### The hateful past: JS and prejudices
 
-JavaScript is an old language, and you can't deny that, its first release dates back to 1995. I had a first contact with JavaScript during its jQuery era, so roughly 11 years after its release. As far as I know, it was a revolution and allowed interactivity in our websites.
+JavaScript is an old language, and you can't deny that, its first release dates back to 1995. I had my first contact with JavaScript during its jQuery era, so roughly 11 years after its release. As far as I know, it was a revolution and allowed interactivity in our websites.
 
 ![Wikipedia in 2005, the memories of boring content...](../images/wikipedia-in-2005.jpg)
 
@@ -31,7 +31,7 @@ Naturally, the first time I read JavaScript code, I panicked: "Where are the typ
 
 ##### Inconsistencies
 
-_"If JavaScript is consistent at something, it's at being inconsistent"_. That was what i used to believe, literally. And i can tell I'm not the only one. If you don't try to understand why JavaScript is the way it is, lots of things might look weird, here are some math examples:
+_"If JavaScript is consistent at something, it's at being inconsistent"_. That was what I used to believe, literally. And I can tell I'm not the only one. If you don't try to understand why JavaScript is the way it is, lots of things might look weird, here are some math examples:
 
 ```js
 [] + [] // -> ''
@@ -43,7 +43,7 @@ I took those from the talk ["Wat", given by Gary Bernhardt at CodeMash 2012](htt
 
 ##### Old JS, callback-hells and the likes
 
-In the end, what kept me away from JavaScript for so long is probably the biased opinion I had, and my completely outdated vision of it. No further than in 2019, I was still thinking JavaScript was that clunky language people use to animate their website. When I heard the word JavaScript, this is the kind of code that would have come through my mind:
+In the end, what kept me away from JavaScript for so long would probably be the biased opinion I had, and my completely outdated vision of it. No further than in 2019, I was still thinking JavaScript was that clunky language people use to animate their website. When I heard the name JavaScript, this is the kind of code that would have come through my mind:
 
 ```js:title=scary-callbacks.js
 const verifyUser = function(username, password, callback) {
@@ -71,25 +71,25 @@ const verifyUser = function(username, password, callback) {
 
 Scary, isn't it ? Well to me it was, and it still is. My error was thinking JavaScript was still stuck at this point...
 
-### A brighter future: entering modern JavaScript era
+### A brighter future: entering the modern JavaScript era
 
-While my work was mainly consisting of maintaining and developing new features on an Universal Windows Platform application (UWP) using C# and XAML, the main solution developed by the company was an ASP.NET backend serving a VueJs frontend. Because I got curious, and I knew that I'd had to eventually work on that, I asked to get involved in it. With no previous knowledge of JavaScript, I wanted to see if things changed. One thing surely changed: my state of mind regarding JS.
+While my work was mainly consisting of maintaining and developing new features on an Universal Windows Platform application (UWP) using C# and XAML, the main solution developed by the company was an ASP.NET backend serving a VueJs frontend. Because I got curious, and I knew that I'd have to eventually work on that, I asked to get involved in it. With no previous knowledge of JavaScript, I wanted to see if things changed. One thing surely changed: my state of mind regarding JS.
 
 ##### First contact with an unknown species called Vue
 
-That. Was. Hard. I mean overwhelming. Opening a complex, probably not perfectly implemented entreprise grade Vue app, was maybe not the best thing I could have done to get into modern JavaScript. I took a step back, and decided to read some documentation. So I learnt some very basic JavaScript principles, and how Vue was using it to create apps with a component-based architecture. That was really intriguing, because what I was reading was JavaScript, but did not feel like the one I remembered. I was enjoying using Vue. So I started implementing small features, and ended up reading about the latest trends in the JS world. I immediately felt that i needed to try those, for the sake of knowledge and discovery or simply curiosity.
+That. Was. Hard. I mean, overwhelming. Opening a complex, probably not perfectly implemented, entreprise grade Vue app, might not have been the best thing I could have done to get into modern JavaScript. I took a step back, and decided to read some documentation. So I learnt some very basic JavaScript principles, and how Vue was using it to create apps with a component-based architecture. That was really intriguing, because what I was reading was JavaScript, but it did not feel like the one I remembered. I was enjoying using Vue. So I started implementing small features, and ended up reading about the latest trends in the JS world. I immediately felt that I needed to try those, for the sake of knowledge and discovery or simply curiosity.
 
 ##### The eye-opener: React
 
-While reading about Vue, I came across numerous references about a "framework" or "library" called React. Compared to the others, it often came out as "more mature" and "more popular". Without thinking twice, I was aready crawling through YouTube for some React knowledge, and I sure wasn't disappointed. The amount of complete but free resources is incredible. Going with the flow (pun slightly intended for whoever gets it), I followed up by implementing simple Redux stores to my app, and learnt by building a dummy ecommerce application. And it felt good, satisfying even. Because I enjoy well designed architecture, I had a great time implenting those as they were like puzzle pieces that I put together.
+While reading about Vue, I came across numerous references about a "framework" or "library" called React. Compared to the others, it often came out as "more mature" and "more popular". Without thinking twice, I was already crawling through YouTube for some React knowledge, and I sure wasn't disappointed. The amount of complete but free resources is incredible. Going with the flow (pun slightly intended for whoever gets it), I followed up by implementing simple Redux stores to my app, and learnt by building a dummy ecommerce application. And it felt good, satisfying even. Because I enjoy well designed architecture, I had a great time implenting those as if they were puzzle pieces that I put together.
 
 ![React + Redux architecture, delightful...](../images/react-architecture.png)
 
-React provided principles to abide by (see [thinking in React](https://reactjs.org/docs/thinking-in-react.html)) while Redux provided me with opinionated and "safe" way to handle requests and data in my application, how convenient! I will not go through everything I learnt because React is so complex, but it is still constantly evolving and growing and it definitely made me love JavaScript. Yes, you read that right.
+React provided principles to abide by (see [thinking in React](https://reactjs.org/docs/thinking-in-react.html)) while Redux provided me with opinionated and "safe" ways to handle requests and data in my application, how convenient! I will not go through everything I learnt, because React is so complex, but it is still constantly evolving and growing and it definitely made me love JavaScript. Yes, you read that right.
 
 ##### Back to back(end): Express
 
-I just witnessed modern Javascript power. And I was impressed. As someone with a prior experience consisting essentially in backend development and creating APIs, I wanted to see what Javascript had to offer. And boy, I was surely not disappointed when I looked at Express.
+I just witnessed modern JavaScript power, and I was impressed. As someone with a prior experience consisting essentially in backend development and creating APIs, I wanted to see what Javascript had to offer. And boy, I was surely not disappointed when I looked at Express.
 
 ```js:title=express-server.js
 // from expressjs.com
@@ -103,16 +103,16 @@ app.get('/', (req, res) => res.send('Hello World!'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 ```
 
-Yup, that's 5 lines to run a web server. And as I dug deeper into Express, I realised the infinite possibilities and how evolutive it is. I built a small app backend, used external APIs (such as Riot Games') and also worked with MongoDB. Everything was fast and efficient and felt satisfying. The `async/await` syntax made my fear of callback hells nothing but a bad memory. I was still missing something... types.
+Yup, that's 5 lines to run a web server. And as I dug deeper into Express, I realised the infinite possibilities and how evolutive it is. I built a small app backend, used external APIs (such as Riot Games') and also worked with MongoDB. Everything was fast and efficient and felt satisfying. The `async/await` syntax made my fear of callback hells nothing but a bad memory. I was still missing something; types.
 
 ##### Do you even type ?
 
-Well, yes I do! The moment I started working with TypeScript is the moment I put JavaScript at the top of the list of languages i enjoy working with. The little worry I had about encountering type errors on runtime and the annoyance of lacking auto-completion and "F12" navigation was gone. TypeScript feels like JavaScript on steroids. It was the icing on the cake. The simplicity and ease of getting an application running provided by JavaScript, with the power of types and all they involve, were in my hands.
+Well, yes I do! The moment I started working with TypeScript is the moment I put JavaScript at the top of the list of languages I enjoy working with. The little worry I had about encountering type errors on runtime and the annoyance of lacking auto-completion and "F12" navigation was gone. TypeScript feels like JavaScript on steroids. It was the icing on the cake. The simplicity and ease of getting an application running provided by JavaScript, with the power of types and all they involve, were in my hands.
 
 > "TypeScript is arguably one of the best things to come to the JavaScript world helping developers comfortably create complex enterprise software without anxiety."
 > <cite>-- Khalil Stemmler</cite>
 
-"Comfortably" and "without anxiety" is exactly how i feel working with Typescript. I can now apply principles derived from abstraction, and also have a better time implementing unit tests.
+"Comfortably" and "without anxiety" is exactly how I feel working with Typescript. I can now apply principles derived from abstraction, and also have a better time implementing unit tests.
 
 I eventually came acrosss a framework called NestJS, an opinionated Typescript-based framework with an architecture inspired by Angular. Out of the box dependency injection and modularity backed by an amazing community and great tutorials/documentation make it an amazing framework for mossst of your complex backend needs.
 
