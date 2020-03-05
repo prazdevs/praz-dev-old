@@ -6,9 +6,10 @@
 
   .footer-copyright {
     display: flex;
+    flex-direction: column;
 
-    .copyright {
-      margin-right: 5px;
+    .separator {
+      display: none;
     }
   }
 
@@ -21,6 +22,19 @@
 
       &:hover {
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@include small-breakpoint {
+  .footer-container {
+    .footer-copyright {
+      flex-direction: row;
+
+      .separator {
+        display: flex;
+        margin: 0 5px;
       }
     }
   }

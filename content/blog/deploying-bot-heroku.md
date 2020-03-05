@@ -6,12 +6,41 @@ thumbnail: ../images/thumbnail.jpg
 tags: [TypeScript, NodeJs, Heroku]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate nisl vitae elit blandit, sed scelerisque ex vestibulum. Vivamus pharetra gravida magna, in consequat ante hendrerit et. Quisque tincidunt finibus sapien in egestas. Phasellus bibendum eleifend imperdiet. Morbi pellentesque pretium libero et vehicula. Suspendisse pharetra quis sem eget congue. Aenean porttitor nunc egestas, iaculis lectus ac, bibendum mauris.
+As being part of communities (mostly revolving around gaming), I use Discord a lot. With the exponential growth of the platform arrived the use of Bots. They allow automated tasks ranging from welcoming new members to moderating chats as well as organize minigames for users. I wanted to create my own bot, because there was no bot that had all the features I needed. The great news is that JavaScript is the language of choice when it comes to building Discord bots. The amazing [Discord.JS](https://discord.js.org/) library almost covers 100% of the Discord API.
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi condimentum aliquet aliquet. Mauris rutrum, ligula ut blandit accumsan, eros risus placerat erat, non luctus sem diam a purus. Morbi in est mi. Vivamus lectus velit, tincidunt eget consequat sit amet, rhoncus id augue. Suspendisse potenti. Aliquam tincidunt tellus nibh, quis porta neque sodales eget. Phasellus blandit metus ipsum, at feugiat lacus ultrices at. Ut sollicitudin odio non tempus interdum. Ut ornare tellus nibh, in tempor libero dapibus ut. Sed vel facilisis nisl. Nam pellentesque elementum enim luctus bibendum.
+### Building the bot
 
-Fusce tempus dolor vitae mollis laoreet. Sed eget ante faucibus, bibendum mauris a, cursus mi. Phasellus tempus porttitor lectus, non congue enim convallis ullamcorper. Mauris consequat pellentesque erat ut ullamcorper. Nunc ultricies volutpat tempor. Sed tincidunt dictum enim, at interdum sapien facilisis vel. Aliquam malesuada eget libero eu tempor. Aliquam ut finibus arcu. Maecenas faucibus nunc lectus, non iaculis mauris ultrices sit amet. Nulla tincidunt volutpat bibendum. Maecenas sit amet purus hendrerit, consequat arcu eu, blandit ante. Fusce feugiat, lorem at posuere iaculis, metus metus vehicula neque, vitae eleifend ante nulla vitae nibh. Donec tortor magna, faucibus eget consequat ac, vehicula vel est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras porta nibh non enim condimentum condimentum.
+To create a bot, we need to access the Discord API and inject our keys into our bots.
 
-Cras varius ligula at metus viverra ullamcorper. Praesent fringilla purus vitae tortor rhoncus accumsan. Pellentesque vestibulum, tortor a suscipit pretium, erat ante pellentesque erat, a euismod arcu ipsum tristique nunc. In nec aliquam justo. Sed euismod mauris nibh, nec porta neque ultrices eget. Sed venenatis et erat sed scelerisque. Integer nisi diam, suscipit non massa a, viverra condimentum velit. Pellentesque quam augue, vulputate nec enim in, sollicitudin maximus lectus.
+##### Setting up on Discord's side
 
-Nam venenatis in lacus nec varius. Phasellus id libero nisi. Duis non bibendum ex, vitae hendrerit ante. In hac habitasse platea dictumst. Vestibulum purus erat, finibus vel commodo sed, tincidunt et mauris. Proin lacinia sodales pretium. Quisque sagittis iaculis luctus. Nullam non dignissim nibh. Aliquam tincidunt justo diam, scelerisque fermentum neque laoreet id. Ut condimentum ante pulvinar magna bibendum, quis condimentum metus pulvinar. Cras faucibus, lorem at egestas euismod, libero ligula fermentum magna, non condimentum felis arcu vitae justo. Mauris purus est, vehicula tristique eros pulvinar, finibus viverra mauris. Nunc lacinia gravida justo nec consequat. Vestibulum pulvinar malesuada leo, sed gravida purus fringilla quis. Duis tempus nisl dolor, et aliquet turpis lobortis sed.
+Before creating a bot, we need to create an application on the [Discord Developer portal](https://discordapp.com/developers/applications). Just click the `New Application` button, give it a name and `Create`. You can give your app some descriptive information if you want, keep in mind that it is your app and **not** the bot itself. To create it, go to the `Bot` tab, then `Add Bot`. This is where you can customize your bot, and how it will appear to other users. Copy the token and keep it preciously aside, the Node app will use it to connect to Discord.
+
+Our final task in the Discord dashboard is to add the bot to one of our servers. Go to the `OAuth2` tab, tick the `bot` scope and pick the permissions you want your bot to be granted upon connection (you can change them later if you can edit roles on the server). For now `Send messages` will be enough. Copy the link generated, and navigate to it, you are prompted to pick a server (that you are admin of) for your bot to join. And voilà, your bot is now on the server, sleeping in the `offline` group.
+
+##### Bootstrapping our server
+
+Discord.JS gives a tiny example of a simple bot. Here is the code:
+
+```javascript:title=server.js
+require('dotenv').config();
+
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
+client.login(process.env.D_TOKEN);
+```
+
+I assume you know how to create a node application so we just add the dependency with `yarn add discord.js` and paste our token in an environment variable called `D_TOKEN`. I use [dotenv](https://www.npmjs.com/package/dotenv) to keep the variables in the project, remember to never push your `.env` file! Now we run `node server.js` and our bot is automagically connected to our server! Type "ping" and it will respond with "pong".
+
+That's great... but where's TypeScript ?
