@@ -4,7 +4,8 @@ import React from 'react';
 const Footer = () => (
   <footer className="footer-container">
     <div className="footer-copyright">
-      <span className="copyright">© {new Date().getFullYear()} — PraZ • </span>
+      <span className="copyright">© {new Date().getFullYear()} — PraZ</span>
+      <span className="separator">•</span>
       <Link to="credits">Credits</Link>
     </div>
     <div className="links">
