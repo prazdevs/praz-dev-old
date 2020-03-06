@@ -1,7 +1,7 @@
 ---
 title: Making a Discord bot with TypeScript and deploying to Heroku
-category: blog-temp
-date: 2020-02-20
+category: blog
+date: 2020-01-20
 thumbnail: ../images/thumbnail.jpg
 tags: [TypeScript, NodeJs, Heroku]
 ---
@@ -22,7 +22,7 @@ Our final task in the Discord dashboard is to add the bot to one of our servers.
 
 Discord.JS gives a tiny example of a simple bot. Here is the code:
 
-```javascript:title=server.js
+```javascript:title=src/app.js
 require('dotenv').config();
 
 const Discord = require('discord.js');
@@ -41,6 +41,144 @@ client.on('message', msg => {
 client.login(process.env.D_TOKEN);
 ```
 
-I assume you know how to create a node application so we just add the dependency with `yarn add discord.js` and paste our token in an environment variable called `D_TOKEN`. I use [dotenv](https://www.npmjs.com/package/dotenv) to keep the variables in the project, remember to never push your `.env` file! Now we run `node server.js` and our bot is automagically connected to our server! Type "ping" and it will respond with "pong".
+I assume you know how to create a node application so we just add the dependency with `yarn add discord.js` and paste our token in an environment variable called `D_TOKEN`. I use [dotenv](https://www.npmjs.com/package/dotenv) to keep the variables in the project, remember to never push your `.env` file! Now we run `node app.js` and our bot is automagically connected to our server! Type "ping" and it will respond with "pong".
 
-That's great... but where's TypeScript ?
+That's great... but what about TypeScript ?
+
+Discord.JS has the amazing advatage to be built with classes in mind. It comes with types so we won't even need to get some `@types`. I do think TypeScript is a great way to build a Discord bot for several reasons. On the left hand, since we constantly use the API and the client, it is really tricky to write useful unit tests; types give us a level of security, making sure our calls to the API will always be well formatted and complete, meaning less potential error on our side. On the second hand, leveraging the type system allow us to bring in abstraction and write reusable and more secure code.
+
+##### Let's convert it!
+
+I will assume you have `tsc` installed and know the basics of TypeScript. Since any valid JavaScript is valid TypeScript, we can add our TS dependency with `yarn add -D typescript` and our dotenv types with `yarn add -D @types/dotenv` and change our `app.js` to `app.ts`. Then we initialize our tsconfig with `tsc --init` and uncomment the following lines:
+
+```json:title=tsconfig.json
+{
+  "compilerOptions": {
+    ...
+    "outDir": "./dist",
+    "rootDir": "./src",
+    ...
+  }
+}
+```
+
+Then we change the scripts in our `package.json`:
+
+```json:title=package.json
+{
+  ...
+  "scripts": {
+    "build": "tsc --builld tsconfig.json",
+    "start": "node dist/app.js",
+    "dev": "yarn build && yarn start"
+  }
+  ...
+}
+```
+
+I will not cover a `--watch` for now. Feel free to do it on your own.
+
+Since we work with typescript, let's make the bot an instantiable class `DiscordBot.ts`, and get its code out of the `app.ts`. We should have something like this :
+
+```typescript:title=src/app.ts
+import { DiscordBot } from './DiscordBot';
+
+require('dotenv').config();
+
+const bot = new DiscordBot();
+
+bot.connect();
+```
+
+```typescript:title=src/DiscordBot.ts
+import { Client } from 'discord.js';
+
+export class DiscordBot {
+  private client: Client = new Client();
+
+  constructor() {
+    this.initializeClient();
+  }
+
+  connect = (): void => {
+    this.client
+      .login(process.env.D_TOKEN)
+      .then(_ => console.log('Connected to Discord'))
+      .catch(error =>
+        console.error(`Could not connect. Error: ${error.message}`)
+      );
+  };
+
+  private initializeClient = (): void => {
+    this.setReadyHandler();
+    this.setMessageHandler();
+  };
+
+  private setReadyHandler = (): void => {
+    this.client.on('ready', () => {
+      console.log(`Logged in as ${this.client.user.tag}!`);
+    });
+  };
+
+  private setMessageHandler = (): void => {
+    this.client.on('message', async (message: Message) => {
+      //* filters out requests from bots
+      if (message.author.bot) return;
+
+      if (message.content === 'ping') {
+        await message.reply('Pong!');
+      }
+    });
+  };
+}
+```
+
+We have our `client` as the only property, instantiated when `DiscordBot` is created. It is private because we do not want to access it (or modify it) from outside of the class. The constructor then initializes out handlers. Those will handle (duh) events our client catches. They are listed in the [Client documentation](https://discord.js.org/#/docs/main/stable/class/Client).
+
+We can now run our server with `yarn dev` and we should see it on the server, up and running. It should respond to "ping" messages with "pong". Time to deploy the bot and have it running 24/7!
+
+### Deploying the bot
+
+There are many ways to deploy a NodeJS application. I like Heroku because it is dead simple to use to host websites or applications and build convenient CI/CD pipelines. It uses containers called "dynos". Just sign up or login into [Heroku](https://id.heroku.com/login) and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
+
+##### Configuring the app
+
+We built a bot, which is an application that will be running all the time, listening to events we asked it to. We need to tell Heroku our application will be using a "Worker" dyno type and which script it should run on start. We just add a file named `Procfile` at the root of the project container the script.
+
+```yaml:title=Procfile
+worker: yarn start
+```
+
+To get the code running up there, Heroku needs to get the source code, build the app, then run it. We need to initialize a git repo (if that's not done already) and add the `.gitignore` for node apps, you can find one [here](https://www.gitignore.io/api/node).
+
+##### Pushing the code
+
+With a couple commands, we will be set.
+
+```bash
+$ git add .
+$ git commit -m 'To heroku!'
+$ heroku login
+```
+
+We are now prompted to log in to Heroku, before being redirected to the command line.
+
+```bash
+$ heroku create
+$ git push heroku master
+```
+
+We now let it do its job until it's done, hopefully without a single error. 
+
+##### Switching to the worker
+
+The last task required is to "activate" our worker dyno. From our app dashboard on Heroku. Next to `Dyno formation` is `Configure Dynos ->`. Click on it, turn the web off, and the worker on.
+
+![Just like this](../images/heroku-dynos-discord.png)
+
+And that's it. All we need to have a Discord bot running 24/7, built using TypeScript and Discord.JS.
+
+___
+   
+_All this code is part of my ZoeBot3 project. You can find more infos on the [GitHub repo](https://github.com/prazdevs/zoebot3) or in the [Projects section](https://praz.dev/projects). If you encounter any issue, or have any question, let me know, I'd be more than happy to help!_
+
