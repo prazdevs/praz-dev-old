@@ -168,13 +168,15 @@ $ heroku create
 $ git push heroku master
 ```
 
-We now let it do its job until it's done, hopefully without a single error. 
+We now let it do its job until it's done, hopefully without a single error.
 
 ##### Switching to the worker
 
-The last task required is to "activate" our worker dyno. From our app dashboard on Heroku. Next to `Dyno formation` is `Configure Dynos ->`. Click on it, turn the web off, and the worker on.
+We need to "activate" our worker dyno. From our app dashboard on Heroku. Next to `Dyno formation` is `Configure Dynos ->`. Click on it, turn the web off, and the worker on.
 
 ![Just like this](../images/heroku-dynos-discord.png)
+
+Finally, we set our `D_TOKEN` in our app's variables from the `Settings` tab in `Config Vars`.
 
 And that's it. All we need to have a Discord bot running 24/7, built using TypeScript and Discord.JS.
 
