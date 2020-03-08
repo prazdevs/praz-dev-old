@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 import Layout from '../layout/layout';
 
 export default ({ data }) => {
-  const photo = data.photo.childImageSharp.fluid;
+  const about = data.about.html;
 
   const stack = [
     {
@@ -22,39 +22,18 @@ export default ({ data }) => {
     },
   ];
 
-  const contactLinks = [
-    {
-      id: 'LinkedIn',
-      link: 'https://github.com/prazdevs',
-      description: 'Reach to me on LinkedIn',
-    },
-    {
-      id: 'Mail',
-      link: 'mailto:sachabouillez@gmail.com',
-      description: 'Send me an email!',
-    },
-    {
-      id: 'GitHub',
-      link: 'https://github.com/prazdevs',
-      description: 'Follow my projects on GitHub!',
-    },
-  ];
   return (
     <Layout>
       <SEO title="About Me" />
-      <About photo={photo} stack={stack} contactLinks={contactLinks} />
+      <About stack={stack} about={about} />
     </Layout>
   );
 };
 
 export const query = graphql`
   query {
-    photo: file(relativePath: { eq: "photo.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 300, maxHeight: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+    about: markdownRemark(frontmatter: { category: { eq: "about-me" } }) {
+      html
     }
   }
 `;

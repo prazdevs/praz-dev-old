@@ -1,23 +1,12 @@
-import Img from 'gatsby-image';
 import React from 'react';
 
-import { TechIcon } from '../tech-icon/tech-icon.component';
+import InfoBlock from '../info-block/info-block.component';
+import TechIcon from '../tech-icon/tech-icon.component';
 
-const About = ({ stack, photo, contactLinks }) => {
+const About = ({ about, stack }) => {
   return (
     <div className="about-container">
-      <div className="about-me-container">
-        <div className="about-me-photo">
-          <Img className="photo" fluid={photo} />
-        </div>
-        <div className="about-me-text">
-          I'm Sacha 'PraZ' Bouillez, a 24 year-old developer based in Lille, FR.
-          I aim to share my love and passion for beautiful code and good
-          practices. I always keep a positive and pragmatic mindset, leading me
-          to remain curious and constantly learning.
-        </div>
-      </div>
-      <hr />
+      <InfoBlock aboutHtml={about} />
       <div className="about-stack-container">
         <h3>Stack &amp; skills</h3>
         <div className="about-stack">

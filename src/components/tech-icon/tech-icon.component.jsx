@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export const TechIcon = ({ name }) => {
+const TechIcon = ({ name }) => {
   const [colored, setColored] = useState(false);
 
   let iconClasses = `icon icon-${name.toLowerCase()}`;
@@ -19,3 +19,4 @@ export const TechIcon = ({ name }) => {
     </div>
   );
 };
+export default TechIcon;

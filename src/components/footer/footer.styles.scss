@@ -18,7 +18,7 @@
     display: flex;
 
     .link {
-      margin: 0 $padding;
+      margin: 0 5px;
 
       &:hover {
         cursor: pointer;
@@ -35,6 +35,12 @@
       .separator {
         display: flex;
         margin: 0 5px;
+      }
+    }
+
+    .links {
+      .link {
+        margin: 0 $padding;
       }
     }
   }
