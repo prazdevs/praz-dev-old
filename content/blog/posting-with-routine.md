@@ -1,8 +1,8 @@
 ---
-title: Posting reddit submissions to Discord automatically
+title: Posting reddit submissions to Discord & Twitter automatically
 category: blog-temp
 date: 2020-08-22
-thumbnail: ../images/thumbnail.jpg
+thumbnail: ../images/discord-routines.png
 tags: [TypeScript, NodeJs]
 ---
 

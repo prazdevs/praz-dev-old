@@ -7,8 +7,6 @@ import Tag from '../tag/tag.component';
 const Card = ({ title, thumbnail, date, read, tags, link }) => {
   const [hovered, setHovered] = useState(false);
 
-  const formattedDate = new Date(date).toDateString();
-
   return (
     <div
       className="card-container"
@@ -35,7 +33,7 @@ const Card = ({ title, thumbnail, date, read, tags, link }) => {
             <div className={`card-footer ${hovered ? 'hovered' : ''}`}>
               <div className="footer-element date">
                 <i className="icon icon-calendar" />
-                <span>{formattedDate}</span>
+                <span>{date}</span>
               </div>
               <div className="footer-element read">
                 <i className="icon icon-watch" />

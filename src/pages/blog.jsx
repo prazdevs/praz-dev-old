@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
-import About from '../components/about/about.component';
 import CardList from '../components/card-list/card-list.component';
+import InfoBlock from '../components/info-block/info-block.component';
 import SEO from '../components/seo';
 import TagFilter from '../components/tag-filter/tag-filter.component';
 import Layout from '../layout/layout';
@@ -44,7 +44,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <About aboutHtml={aboutHtml} />
+      <InfoBlock aboutHtml={aboutHtml} />
       <TagFilter tags={filterTags} handleTagClick={handleTagClick} />
       <CardList posts={filteredPosts} />
     </Layout>
@@ -62,7 +62,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date
+            date(formatString: "DD/MM/YYYY")
             title
             tags
             thumbnail {

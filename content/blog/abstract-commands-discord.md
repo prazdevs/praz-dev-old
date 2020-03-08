@@ -1,8 +1,8 @@
 ---
-title: Abstract commands in a Discord bot with Typescript
+title: Command and Factory patterns in a Discord bot with Typescript
 category: blog-temp
-date: 2020-08-21
-thumbnail: ../images/thumbnail.jpg
+date: 2020-02-24
+thumbnail: ../images/discord-command-factory.png
 tags: [TypeScript, NodeJs]
 ---
 

@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import About from '../components/about/about.component';
 import CardList from '../components/card-list/card-list.component';
+import InfoBlock from '../components/info-block/info-block.component';
 import Intro from '../components/intro/intro.component';
 import SEO from '../components/seo';
 import Layout from '../layout/layout';
@@ -26,7 +26,7 @@ export default ({ data }) => {
       <SEO title="Home" />
       <div>
         <Intro photo={photo} />
-        <About aboutHtml={aboutHtml} />
+        <InfoBlock aboutHtml={aboutHtml} />
         <CardList posts={posts} title="Latest posts" />
       </div>
     </Layout>
@@ -44,12 +44,12 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date
+            date(formatString: "DD/MM/YYYY")
             title
             tags
             thumbnail {
               childImageSharp {
-                fixed(width: 157, height: 100) {
+                fixed(width: 150, height: 100) {
                   ...GatsbyImageSharpFixed
                 }
               }

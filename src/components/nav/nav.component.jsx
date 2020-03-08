@@ -20,10 +20,10 @@ const Nav = () => {
   }, []);
 
   const navLinks = [
-    // {
-    //   id: 'about me',
-    //   link: '/me',
-    // },
+    {
+      id: 'about me',
+      link: '/me',
+    },
     {
       id: 'posts',
       link: '/blog',

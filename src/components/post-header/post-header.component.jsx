@@ -4,8 +4,6 @@ import React from 'react';
 import Tag from '../tag/tag.component';
 
 const PostHeader = ({ title, read, date, tags, thumbnail }) => {
-  const formattedDate = new Date(date).toDateString();
-
   return (
     <div className="post-header">
       <h1 className="post-title">{title}</h1>
@@ -18,7 +16,7 @@ const PostHeader = ({ title, read, date, tags, thumbnail }) => {
         <div className="post-meta">
           <div className="meta-element">
             <i className="icon icon-calendar" />
-            <span>{formattedDate}</span>
+            <span>{date}</span>
           </div>
           <div className="meta-element">
             <i className="icon icon-watch" />

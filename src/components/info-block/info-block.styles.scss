@@ -1,0 +1,14 @@
+.info-block {
+  font-family: 'Handlee';
+  font-size: 1.5rem;
+  margin: $padding;
+  strong {
+    color: $primary-color;
+  }
+}
+
+@include small-breakpoint {
+  .info-block {
+    margin: $margins;
+  }
+}

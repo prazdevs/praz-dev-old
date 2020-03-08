@@ -1,14 +1,97 @@
 .about-container {
-  font-family: 'Handlee';
-  font-size: 1.5rem;
-  margin: $padding;
-  strong {
-    color: $primary-color;
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+
+    .about-me-text {
+      font-family: 'Handlee';
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      text-align: justify;
+    }
+
+    .about-me-photo {
+      display: flex;
+      align-self: center;
+      padding: 7px;
+      margin-bottom: $padding;
+
+      .photo {
+        min-width: 120px;
+        min-height: 120px;
+        border-radius: 50%;
+        align-self: center;
+      }
+    }
+  }
+
+  .about-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .link {
+      display: flex;
+      .icon {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .about-stack-container {
+    .about-stack {
+      margin-left: $padding;
+    }
+    .stack {
+      .techs {
+        display: flex;
+        flex-direction: column;
+        .techs-name {
+          margin-left: $padding;
+        }
+        .techs-list {
+          //margin: $padding 0;
+          padding-left: $padding;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
   }
 }
 
 @include small-breakpoint {
+  .about-me-container {
+    flex-direction: row-reverse !important;
+    align-items: center;
+
+    .about-me-photo {
+      margin-left: $padding;
+      flex-direction: row-reverse;
+    }
+
+    .about-me-text {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+  }
+
+  .about-links-container {
+    flex-direction: row !important;
+    justify-content: space-evenly;
+  }
+
   .about-container {
-    margin: $margins;
+    .about-stack-container {
+      .stack {
+        .techs {
+          .techs-name {
+            margin-right: $padding;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import About from '../components/about/about.component';
+import InfoBlock from '../components/info-block/info-block.component';
 import SEO from '../components/seo';
 import Layout from '../layout/layout';
 
@@ -10,7 +10,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Credits Page" />
-      <About aboutHtml={aboutHtml} />
+      <InfoBlock aboutHtml={aboutHtml} />
     </Layout>
   );
 };

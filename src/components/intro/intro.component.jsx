@@ -8,7 +8,6 @@ const Intro = ({ photo }) => {
     'I am a Javascript enthusiast',
     'I am always learning',
     'I am constantly looking to improve',
-    'I am an avid gamer',
   ];
 
   return (

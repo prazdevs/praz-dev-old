@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import About from '../components/about/about.component';
+import InfoBlock from '../components/info-block/info-block.component';
 import Project from '../components/project/project.component';
 import SEO from '../components/seo';
 import Layout from '../layout/layout';
@@ -22,7 +22,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <About aboutHtml={aboutHtml} />
+      <InfoBlock aboutHtml={aboutHtml} />
       <div className="projects">
         {projects.map(project => (
           <Project
