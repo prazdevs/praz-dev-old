@@ -49,7 +49,7 @@ Discord.JS has the amazing advatage to be built with classes in mind. It comes w
 
 ##### Let's convert it!
 
-I will assume you have `tsc` installed and know the basics of TypeScript. Since any valid JavaScript is valid TypeScript, we can add our TS dependency with `yarn add -D typescript` and our dotenv types with `yarn add -D @types/dotenv` and change our `app.js` to `app.ts`. Then we initialize our tsconfig with `tsc --init` and uncomment the following lines:
+I will assume you have `tsc` installed and know the basics of TypeScript. Since any valid JavaScript is valid TypeScript, we can add our TS dependency with `yarn add -D typescript` and our dotenv types with `yarn add -D @types/dotenv` and change our `app.js` to `app.ts`. We then initialize our tsconfig with `tsc --init` and uncomment the following lines:
 
 ```json:title=tsconfig.json
 {
@@ -114,27 +114,29 @@ export class DiscordBot {
     return DiscordBot.instance;
   }
 
-  connect = (): void => {
+  connect(): void {
     this.client
       .login(process.env.D_TOKEN)
       .then(_ => console.log('Connected to Discord'))
       .catch(error =>
         console.error(`Could not connect. Error: ${error.message}`)
       );
-  };
+  }
 
-  private initializeClient = (): void => {
+  private initializeCient(): void {
+    if (!this.client) return;
+
     this.setReadyHandler();
     this.setMessageHandler();
-  };
-
-  private setReadyHandler = (): void => {
+  }
+  
+  private setReadyHandler(): void {
     this.client.on('ready', () => {
       console.log(`Logged in as ${this.client.user.tag}!`);
     });
   };
 
-  private setMessageHandler = (): void => {
+  private setMessageHandler(): void {
     this.client.on('message', async (message: Message) => {
       //* filters out requests from bots
       if (message.author.bot) return;
