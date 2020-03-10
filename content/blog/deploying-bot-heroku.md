@@ -78,14 +78,19 @@ Then we change the scripts in our `package.json`:
 
 I will not cover a `--watch` for now. Feel free to do it on your own.
 
-Since we work with typescript, let's make the bot an instantiable class `DiscordBot.ts`, and get its code out of the `app.ts`. We should have something like this :
+##### Singleton to the rescue
+
+Since we work with TypeScript, how about using the **Singleton design pattern** for our bot? Since the Discord API Key is stored as an environment variable, we want to avoid having multiple instances of it as they would conflict with each other. Typescript makes it super easy; all we need is: 
+- a `private` constructor, not callable outside of the class.
+- a `static instance` referencing our single insance of the class.
+- a `getInstance` method to get the instance of the class. It follows a lazy evaluation strategy, so it creates the instance when called for the first time.
 
 ```typescript:title=src/app.ts
 import { DiscordBot } from './DiscordBot';
 
 require('dotenv').config();
 
-const bot = new DiscordBot();
+const bot = DiscordBot.getInstance();
 
 bot.connect();
 ```
@@ -94,10 +99,19 @@ bot.connect();
 import { Client } from 'discord.js';
 
 export class DiscordBot {
+  private static instance: DiscordBot;
+
   private client: Client = new Client();
 
-  constructor() {
+  private constructor() {
     this.initializeClient();
+  }
+
+  static getInstance(): DiscordBot {
+    if (!DiscordBot.instance) {
+      DiscordBot.instance = new DiscordBot();
+    }
+    return DiscordBot.instance;
   }
 
   connect = (): void => {
