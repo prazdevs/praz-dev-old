@@ -90,7 +90,8 @@ module.exports = {
             "cache-control: must-revalidate"
           ],
           "/sw.js": [
-            "cache-control: public",
+            "cache-control: no-cache",
+            "cache-control:  no-store", 
             "cache-control:  max-age=0", 
             "cache-control: must-revalidate"
           ],
