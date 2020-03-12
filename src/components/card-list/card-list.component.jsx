@@ -6,7 +6,6 @@ const CardList = ({ posts, title }) => (
   <div className="card-list">
     {title ? (
       <h3 className="card-list-title">
-        <i className="icon-bullet" />
         <span>{title}</span>
       </h3>
     ) : null}

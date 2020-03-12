@@ -218,12 +218,6 @@
   }
 }
 
-.icon-bullet {
-  &:before {
-    content: '\e016';
-  }
-}
-
 .icon-mononoke {
   &:before {
     content: '\e015';
@@ -242,8 +236,38 @@
   }
 }
 
-.icon-mail {
+.icon-yarn {
   &:before {
-    content: '\e01a';
+    content: '\e016';
+  }
+  &.colored {
+    color: $yarn;
+  }
+}
+
+.icon-postgresql {
+  &:before {
+    content: '\e017';
+  }
+  &.colored {
+    color: $postgresql;
+  }
+}
+
+.icon-nuxt {
+  &:before {
+    content: '\e020';
+  }
+  &.colored {
+    color: $nuxt;
+  }
+}
+
+.icon-eslint {
+  &:before {
+    content: '\e021';
+  }
+  &.colored {
+    color: $eslint;
   }
 }
