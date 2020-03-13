@@ -27,15 +27,6 @@ const Footer = () => (
       >
         <i className="icon-linkedin" />
       </a>
-      <a
-        className="link link-ko-fi"
-        href="https://ko-fi.com/prazdevs"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Support on Ko-Fi"
-      >
-        <i className="icon-ko-fi" />
-      </a>
     </div>
   </footer>
 );

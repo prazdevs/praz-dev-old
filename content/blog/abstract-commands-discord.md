@@ -28,7 +28,7 @@ export abstract class Command<CommandType> {
 }
 ```
 
-Wait, what is that `<CommandType>` thing? We will later implement a way to create those commands from Discord messages, and we want to know exactly what commands are allowed and can be created, so we define them in an `enum` passed as the generic type of the command.
+Wait, what is that `<CommandType>` thing? We will later implement a way to create those commands from Discord messages, and we want to know exactly which commands are allowed and how they should be created, so we define them in an `enum` passed as the generic type of the command.
 
 The class is abstract because it is our blueprint, therefore, the methods are also abstract.
 

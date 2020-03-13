@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -12,7 +12,7 @@ const Nav = () => {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener('scroll', navOnScroll);
     return () => {
       window.removeEventListener('scroll', navOnScroll);
