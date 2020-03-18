@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 
 import InfoBlock from '../components/info-block/info-block.component';
