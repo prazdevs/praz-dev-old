@@ -10,7 +10,7 @@ export default ({ data }) => {
   const stack = [
     {
       name: 'Back-end',
-      techs: ['NodeJS', 'Express', 'NestJS', 'MongoDB', 'Redis', 'PostgreSQL'],
+      techs: ['NodeJS', 'Express', 'NestJS', 'Redis', 'MongoDB'],
     },
     {
       name: 'Front-end',
