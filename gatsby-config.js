@@ -85,6 +85,7 @@ module.exports = {
       options: {
         headers: {
           "/public/**/*.html": [
+            "cache-control: no-cache",
             "cache-control: public",
             "cache-control:  max-age=0", 
             "cache-control: must-revalidate"
@@ -96,6 +97,7 @@ module.exports = {
             "cache-control: must-revalidate"
           ],
           "/public/page-data/*": [
+            "cache-control: no-cache",
             "cache-control: public",
             "cache-control:  max-age=0", 
             "cache-control: must-revalidate"
