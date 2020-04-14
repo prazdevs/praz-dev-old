@@ -5,7 +5,7 @@ tags:
   - TypeScript
   - NodeJs
   - Heroku
-thumbnail: ../images/zoe-bot.jpg
+thumbnail: ../images/zoe-bot.png
 link: https://github.com/prazdevs/zoebot3
 maintained: true
 ---
