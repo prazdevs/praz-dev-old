@@ -5,8 +5,8 @@ tags:
   - JavaScript
   - NodeJs
   - Express
-thumbnail: ../images/logo-riot-games.jpg
-link: https://github.com/prazdevs/foxfam-old
+thumbnail: ../images/summoners-riot.png
+link: https://github.com/prazdevs/summoner-register
 maintained: false
 ---
 

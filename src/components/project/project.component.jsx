@@ -46,15 +46,17 @@ const Project = ({ title, tags, thumbnail, link, content, maintained }) => {
       <div className="project-content">
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
-      <a
-        href={link}
-        className="github-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="icon icon-github" />
-        See on GitHub
-      </a>
+      {link ? (
+        <a
+          href={link}
+          className="github-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="icon icon-github" />
+          See on GitHub
+        </a>
+      ) : null}
     </div>
   );
 };
