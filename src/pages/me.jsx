@@ -11,15 +11,32 @@ export default ({ data }) => {
   const stack = [
     {
       name: 'Back-end',
-      techs: ['NodeJS', 'Express', 'NestJS', 'Redis', 'MongoDB'],
+      techs: [
+        { name: 'NodeJS', link: 'https://nodejs.org/en/' },
+        { name: 'Express', link: 'https://expressjs.com/' },
+        { name: 'NestJS', link: 'https://nestjs.com/' },
+        { name: 'Redis', link: 'https://redis.io/' },
+        { name: 'MongoDB', link: 'https://www.mongodb.com/' },
+      ],
     },
     {
       name: 'Front-end',
-      techs: ['React', 'Redux', 'Gatsby', 'Vue', 'Sass'],
+      techs: [
+        { name: 'React', link: 'https://reactjs.org/' },
+        { name: 'Redux', link: 'https://redux.js.org/' },
+        { name: 'Gatsby', link: 'https://www.gatsbyjs.org/' },
+        { name: 'Vue', link: 'https://vuejs.org/' },
+        { name: 'Sass', link: 'https://sass-lang.com/' },
+      ],
     },
     {
       name: 'Other technologies',
-      techs: ['GraphQL', 'Jest', 'ESLint', 'Yarn'],
+      techs: [
+        { name: 'GraphQL', link: 'https://graphql.org/' },
+        { name: 'Jest', link: 'https://jestjs.io/' },
+        { name: 'ESLint', link: 'https://eslint.org/' },
+        { name: 'Yarn', link: 'https://yarnpkg.com/' },
+      ],
     },
   ];
 

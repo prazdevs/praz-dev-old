@@ -17,12 +17,20 @@ const About = ({ about, stack }) => {
           to the front easily.
         </div>
         <div className="stack">
-          {stack.map(techs => (
+          {stack.map((techs) => (
             <div className="techs">
               <h4 className="techs-name">{techs.name}</h4>
               <div className="techs-list">
-                {techs.techs.map(tech => (
-                  <TechIcon className="tech" name={tech} />
+                {techs.techs.map((tech) => (
+                  <a
+                    href={tech.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={tech.name}
+                    key={tech.name}
+                  >
+                    <TechIcon className="tech" name={tech.name} />
+                  </a>
                 ))}
               </div>
             </div>
