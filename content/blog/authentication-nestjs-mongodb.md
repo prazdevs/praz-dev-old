@@ -12,7 +12,7 @@ In this post, we will build a very simple REST API with 3 routes :
 
 - `POST /auth/signup` : public route to sign up
 - `POST /auth/signin` : public route to sign in and get a JWT token
-- `GET /auth/me_` : protected route using JWT token as Bearer
+- `GET /auth/me` : protected route using JWT token as Bearer
 
 Users will be stored in a MongoDB database, I assume you have basic knowledge of MongoDB and know how to create a database and connect to it. I personnaly use [MongoDB Cloud](https://www.mongodb.com/cloud).
 
