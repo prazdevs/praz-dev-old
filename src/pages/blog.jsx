@@ -17,25 +17,27 @@ export default ({ data }) => {
     title: node.frontmatter.title,
     link: node.fields.slug,
     date: node.frontmatter.date,
-    tags: node.frontmatter.tags,
+    tags: node.frontmatter.tags.sort(),
     read: node.fields.readingTime.text,
     thumbnail: node.frontmatter.thumbnail.childImageSharp.fixed,
   }));
 
   const tags = data.tags.group;
 
-  const filterTags = tags.map(tag => ({
+  const filterTags = tags.map((tag) => ({
     selected: selectedTags.includes(tag.fieldValue),
     ...tag,
   }));
 
   const filteredPosts = selectedTags.length
-    ? posts.filter(post => selectedTags.every(tag => post.tags.includes(tag)))
+    ? posts.filter((post) =>
+        selectedTags.every((tag) => post.tags.includes(tag))
+      )
     : posts;
 
-  const handleTagClick = clickedTag => {
+  const handleTagClick = (clickedTag) => {
     if (selectedTags.includes(clickedTag)) {
-      setSelectedTags(selectedTags.filter(tag => tag !== clickedTag));
+      setSelectedTags(selectedTags.filter((tag) => tag !== clickedTag));
     } else {
       setSelectedTags([clickedTag, ...selectedTags]);
     }
