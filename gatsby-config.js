@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `praz.dev`,
-    description: `My personal dev blog, with JavaScript and stuff...`,
+    description: `Sharing my love and passion for beautiful code and good practices. Positive and pragmatic mindset leads me to remain curious and constantly learning.`,
     author: `Sacha 'PraZ' Bouillez`,
     siteUrl: `https://praz.dev`,
     image: `https://praz.dev/images/icon.png`,
