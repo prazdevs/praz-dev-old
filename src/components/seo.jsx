@@ -52,7 +52,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: 'og:image',
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.image,
         },
         {
           name: 'twitter:card',
@@ -72,7 +72,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: 'twitter:image',
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.image,
         },
       ].concat(meta)}
     />
