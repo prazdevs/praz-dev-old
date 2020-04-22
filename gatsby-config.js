@@ -4,7 +4,7 @@ module.exports = {
     description: `My personal dev blog, with JavaScript and stuff...`,
     author: `Sacha 'PraZ' Bouillez`,
     siteUrl: `https://praz.dev`,
-    image: '/images/icon.png',
+    image: `https://praz.dev/images/icon.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
