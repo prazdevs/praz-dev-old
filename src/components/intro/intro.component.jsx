@@ -4,7 +4,7 @@ import Typed from 'react-typed';
 
 const Intro = ({ photo }) => {
   const strings = [
-    'I am a fullstack developer',
+    'I am a passionate developer',
     'I am a Javascript enthusiast',
     'I am always learning',
     'I am constantly looking to improve',
