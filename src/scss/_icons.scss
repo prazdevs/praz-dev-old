@@ -271,3 +271,48 @@
     color: $eslint;
   }
 }
+
+.icon-reason {
+  &:before {
+    content: '\e022';
+  }
+  &.colored {
+    color: $reason;
+  }
+}
+
+.icon-svelte {
+  &:before {
+    content: '\e023';
+  }
+  &.colored {
+    color: $svelte;
+  }
+}
+
+.icon-firebase {
+  &:before {
+    content: '\e024';
+  }
+  &.colored {
+    color: $firebase;
+  }
+}
+
+.icon-apollo {
+  &:before {
+    content: '\e026';
+  }
+  &.colored {
+    color: $apollo;
+  }
+}
+
+.icon-nextjs {
+  &:before {
+    content: '\e027';
+  }
+  &.colored {
+    color: $nextjs;
+  }
+}

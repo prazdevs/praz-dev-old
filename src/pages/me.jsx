@@ -17,6 +17,7 @@ export default ({ data }) => {
         { name: 'NestJS', link: 'https://nestjs.com/' },
         { name: 'Redis', link: 'https://redis.io/' },
         { name: 'MongoDB', link: 'https://www.mongodb.com/' },
+        { name: 'Firebase', link: 'https://firebase.google.com/' },
       ],
     },
     {
@@ -26,6 +27,7 @@ export default ({ data }) => {
         { name: 'Redux', link: 'https://redux.js.org/' },
         { name: 'Gatsby', link: 'https://www.gatsbyjs.org/' },
         { name: 'Vue', link: 'https://vuejs.org/' },
+        { name: 'Svelte', link: 'https://svelte.dev/' },
         { name: 'Sass', link: 'https://sass-lang.com/' },
       ],
     },
@@ -33,9 +35,11 @@ export default ({ data }) => {
       name: 'Other technologies',
       techs: [
         { name: 'GraphQL', link: 'https://graphql.org/' },
+        { name: 'Apollo', link: 'https://www.apollographql.com/' },
         { name: 'Jest', link: 'https://jestjs.io/' },
         { name: 'ESLint', link: 'https://eslint.org/' },
         { name: 'Yarn', link: 'https://yarnpkg.com/' },
+        { name: 'Reason', link: 'https://reasonml.github.io/' },
       ],
     },
   ];
