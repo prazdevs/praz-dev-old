@@ -52,9 +52,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
