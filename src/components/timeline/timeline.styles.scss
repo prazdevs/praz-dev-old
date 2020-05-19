@@ -1,0 +1,38 @@
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  position: relative;
+
+  .timeline-arrow-head {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent $primary-color;
+    transform: rotate(-90deg);
+    right: calc(50% - 5px);
+    top: -7px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      transform: translate(-13px, -10px);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent $background;
+    }
+  }
+
+  &:after {
+    background-color: $primary-color;
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: calc(50% - 1px);
+  }
+}

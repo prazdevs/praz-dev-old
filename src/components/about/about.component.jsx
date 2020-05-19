@@ -2,8 +2,9 @@ import React from 'react';
 
 import InfoBlock from '../info-block/info-block.component';
 import TechIcon from '../tech-icon/tech-icon.component';
+import Timeline from '../timeline/timeline.component';
 
-const About = ({ about, stack }) => {
+const About = ({ about, stack, timeline }) => {
   return (
     <div className="about-container">
       <InfoBlock aboutHtml={about} />
@@ -17,8 +18,8 @@ const About = ({ about, stack }) => {
           to the front easily.
         </div>
         <div className="stack">
-          {stack.map((techs) => (
-            <div className="techs">
+          {stack.map((techs, ind) => (
+            <div className="techs" key={ind}>
               <h4 className="techs-name">{techs.name}</h4>
               <div className="techs-list">
                 {techs.techs.map((tech) => (
@@ -37,6 +38,16 @@ const About = ({ about, stack }) => {
           ))}
         </div>
       </div>
+      <hr />
+      <div className="about-education-timeline-container">
+        <h3>Timeline</h3>
+        <div>
+          In thie following timeline, I try to keep track of impactful events
+          that made me the developer I am today.
+        </div>
+        <Timeline timeline={timeline} />
+      </div>
+
       <hr />
     </div>
   );

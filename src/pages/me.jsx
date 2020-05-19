@@ -15,7 +15,6 @@ export default ({ data }) => {
         { name: 'NodeJS', link: 'https://nodejs.org/en/' },
         { name: 'Express', link: 'https://expressjs.com/' },
         { name: 'NestJS', link: 'https://nestjs.com/' },
-        { name: 'Redis', link: 'https://redis.io/' },
         { name: 'MongoDB', link: 'https://www.mongodb.com/' },
         { name: 'Firebase', link: 'https://firebase.google.com/' },
       ],
@@ -44,10 +43,37 @@ export default ({ data }) => {
     },
   ];
 
+  const timeline = [
+    {
+      text: 'Started my dev blog and vowed my love to Javascript',
+      date: 'Dec. 2020',
+      tag: 'project',
+      link: 'https://praz.dev/',
+    },
+    {
+      text: 'Started working at Neoledge as Software Engineer (C#/VueJs)',
+      date: 'April 2019',
+      tag: 'work',
+      link: 'https://www.neoledge.com/en/',
+    },
+    {
+      text: "Obtained a bachelor's degree in web development",
+      date: 'April 2019',
+      tag: 'education',
+      link: 'https://da2i.univ-lille.fr/',
+    },
+    {
+      text: "Obtained a bachelor's degree in general Computer Science",
+      date: 'June 2017',
+      tag: 'education',
+      link: 'https://www.univ-lille.fr/formations/fr-00002032.html',
+    },
+  ];
+
   return (
     <Layout>
       <SEO title="About Me" />
-      <About stack={stack} about={about} />
+      <About stack={stack} about={about} timeline={timeline} />
     </Layout>
   );
 };

@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="footer-copyright">
       <span className="copyright">© {new Date().getFullYear()} — PraZ</span>
       <span className="separator">•</span>
-      <Link to="credits">Credits</Link>
+      <Link to="/credits">Credits</Link>
     </div>
     <div className="links">
       <a

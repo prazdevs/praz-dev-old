@@ -18,7 +18,7 @@ export default ({ data }) => {
     thumbnail: node.frontmatter.thumbnail.childImageSharp.fixed,
   }));
 
-  const photo = data.photo.childImageSharp.fluid;
+  const photo = data.photo.childImageSharp.fixed;
   const aboutHtml = data.about.html;
 
   return (
@@ -67,8 +67,8 @@ export const query = graphql`
     }
     photo: file(relativePath: { eq: "photo.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 150, maxHeight: 150) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
