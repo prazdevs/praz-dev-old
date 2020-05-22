@@ -45,7 +45,7 @@ export default ({ data }) => {
 
   const timeline = [
     {
-      text: 'Started my dev blog and vowed my love to Javascript',
+      text: 'Started writing my dev blog and sharing my love of Javascript',
       date: 'Dec. 2020',
       tag: 'project',
       link: 'https://praz.dev/',

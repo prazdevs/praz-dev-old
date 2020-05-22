@@ -42,7 +42,7 @@ const About = ({ about, stack, timeline }) => {
       <div className="about-education-timeline-container">
         <h3>Timeline</h3>
         <div>
-          In thie following timeline, I try to keep track of impactful events
+          In the following timeline, I try to keep track of impactful events
           that made me the developer I am today.
         </div>
         <Timeline timeline={timeline} />
