@@ -38,7 +38,7 @@ export default ({ data }) => {
         { name: 'Jest', link: 'https://jestjs.io/' },
         { name: 'ESLint', link: 'https://eslint.org/' },
         { name: 'Yarn', link: 'https://yarnpkg.com/' },
-        { name: 'Reason', link: 'https://reasonml.github.io/' },
+        { name: 'Storybook', link: 'https://storybook.js.org/' },
       ],
     },
   ];

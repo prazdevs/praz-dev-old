@@ -316,3 +316,30 @@
     color: $nextjs;
   }
 }
+
+.icon-twitter {
+  &:before {
+    content: '\e028';
+  }
+  &.colored {
+    color: $twitter;
+  }
+}
+
+.icon-storybook {
+  &:before {
+    content: '\e029';
+  }
+  &.colored {
+    color: $storybook;
+  }
+}
+
+.icon-d3js {
+  &:before {
+    content: '\e030';
+  }
+  &.colored {
+    color: $d3js;
+  }
+}
