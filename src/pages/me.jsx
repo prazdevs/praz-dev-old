@@ -48,25 +48,21 @@ export default ({ data }) => {
       text: 'Started writing my dev blog and sharing my love of Javascript',
       date: 'Dec. 2020',
       tag: 'project',
-      link: 'https://praz.dev/',
     },
     {
       text: 'Started working at Neoledge as Software Engineer (C#/VueJs)',
       date: 'April 2019',
       tag: 'work',
-      link: 'https://www.neoledge.com/en/',
     },
     {
       text: "Obtained a bachelor's degree in web development",
       date: 'April 2019',
       tag: 'education',
-      link: 'https://da2i.univ-lille.fr/',
     },
     {
       text: "Obtained a bachelor's degree in general Computer Science",
       date: 'June 2017',
       tag: 'education',
-      link: 'https://www.univ-lille.fr/formations/fr-00002032.html',
     },
   ];
 
