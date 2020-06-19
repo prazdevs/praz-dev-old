@@ -80,7 +80,7 @@ module.exports = {
         icon: `content/images/icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-netlify`,
       options: {

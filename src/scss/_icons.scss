@@ -343,3 +343,12 @@
     color: $d3js;
   }
 }
+
+.icon-cypress {
+  &:before {
+    content: '\e031';
+  }
+  &.colored {
+    color: $cypress;
+  }
+}
