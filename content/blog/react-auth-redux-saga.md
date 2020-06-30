@@ -174,7 +174,7 @@ export const logOut = () => ({
 
 Nothing special here either, we make sure to pass the right payload depending on the situation. Finally, we add the reducer.
 
-```js:title=src/store/auth/authReduer.js
+```js:title=src/store/auth/authReducer.js
 import types from './authActionTypes';
 
 const INITIAL_STATE = {
