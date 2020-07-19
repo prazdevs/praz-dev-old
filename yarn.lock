@@ -13433,10 +13433,10 @@ typeface-handlee@^0.0.72:
   resolved "https://registry.yarnpkg.com/typeface-handlee/-/typeface-handlee-0.0.72.tgz#2da29686a227ea0dbb026b93a598ad443a54890e"
   integrity sha512-AlGz8A+uhK0Iubtrs0i5vJul0nJXEKqo7guUHkCRE9HMobnspB2paCp8olj0r21+HAdt1L1pUANUPa7VMXlpTg==
 
-typeface-jetbrains-mono@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/typeface-jetbrains-mono/-/typeface-jetbrains-mono-1.0.5.tgz#084d76788c34e6999bde826693c03c72ea045211"
-  integrity sha512-aeaTHVmPzK3uggRWk1WwDeou9xmkpnhQA+FXGrc2Enc80MBHmRvoMqydqZG+MNWle+4cUUCldFgUDth7AQQeuw==
+typeface-jetbrains-mono@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/typeface-jetbrains-mono/-/typeface-jetbrains-mono-2.0.0.tgz#f522311d18ae5681efce1699a99225b525b82e29"
+  integrity sha512-QrIlq+Jtn5ghF0RUSa6WubXro+DmtBOC9M+YQeODd1fW31jPzvY1qRM0qiarIelLgoj4ytWrj6iXCPxcbDWavw==
 
 typeface-quicksand@^1.1.3:
   version "1.1.4"
