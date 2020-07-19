@@ -22,7 +22,7 @@ stack:
           { name: 'Redux', link: 'https://redux.js.org/' },
           { name: 'Gatsby', link: 'https://www.gatsbyjs.org/' },
           { name: 'Vue', link: 'https://vuejs.org/' },
-          { name: 'Svelte', link: 'https://svelte.dev' },
+          { name: 'Nuxt', link: 'https://nuxtjs.org/' },
           { name: 'Sass', link: 'https://sass-lang.com/' },
         ],
     },
