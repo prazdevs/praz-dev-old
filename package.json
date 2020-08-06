@@ -10,7 +10,7 @@
     "gatsby-plugin-netlify": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.6.24",
+    "gatsby-plugin-sharp": "^2.6.25",
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-external-links": "^0.0.4",
