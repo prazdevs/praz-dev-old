@@ -3446,9 +3446,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111:
-  version "1.0.30001119"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001119.tgz#99185d04bc00e76a86c9ff731dc5ec8e53aefca1"
-  integrity sha512-Hpwa4obv7EGP+TjkCh/wVvbtNJewxmtg4yVJBLFnxo35vbPapBr138bUWENkb5j5L9JZJ9RXLn4OrXRG/cecPQ==
+  version "1.0.30001120"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001120.tgz#cd21d35e537214e19f7b9f4f161f7b0f2710d46c"
+  integrity sha512-JBP68okZs1X8D7MQTY602jxMYBmXEKOFkzTBaNSkubooMPFOAv2TXWaKle7qgHpjLDhUzA/TMT0qsNleVyXGUQ==
 
 case@^1.6.2:
   version "1.6.3"
@@ -7183,19 +7183,19 @@ graphql-import@^0.7.1:
     lodash "^4.17.4"
     resolve-from "^4.0.0"
 
-graphql-playground-html@1.6.25:
-  version "1.6.25"
-  resolved "https://registry.yarnpkg.com/graphql-playground-html/-/graphql-playground-html-1.6.25.tgz#2d8fa250cec4036a4f5b7f8ad069c86d6d64c95f"
-  integrity sha512-wMNvGsQ0OwBVhn72VVi7OdpI85IxiIZT43glRx7gQIwQ6NvhFnzMYBIVmcJAJ4UlXRYiWtrQhuOItDXObiR3kg==
+graphql-playground-html@^1.6.27:
+  version "1.6.27"
+  resolved "https://registry.yarnpkg.com/graphql-playground-html/-/graphql-playground-html-1.6.27.tgz#4ead6ef79c275184bbc90f3d69b4f764b5192090"
+  integrity sha512-f+M74WgZVwoY7CyT3teKpS1W/Zg6p0X4SbQT32oWz8QQ62ipQV0c+Xc/SvAwiBMxVgrbRsw3Yqvz8XdX56e4xw==
   dependencies:
     xss "^1.0.6"
 
 graphql-playground-middleware-express@^1.7.18:
-  version "1.7.18"
-  resolved "https://registry.yarnpkg.com/graphql-playground-middleware-express/-/graphql-playground-middleware-express-1.7.18.tgz#306d64d54ccb531baf7df0699df3220ca4e25364"
-  integrity sha512-EywRL+iBa4u//5YbY1iJxrl0n4IKyomBKgLXrMbG8gHJUwxmFs5FCWJJ4Q6moSn5Q3RgMZvrWzXB27lKwN8Kgw==
+  version "1.7.20"
+  resolved "https://registry.yarnpkg.com/graphql-playground-middleware-express/-/graphql-playground-middleware-express-1.7.20.tgz#6417f0c97af3a38b60b432fcc93f20d43c6e21e6"
+  integrity sha512-ldFtpVfG2cX9CyqRJFL7rff759hcY8R1MPIThGs9Z90BBLdL7I/MXz8DYqjBngYrKJjyRDPpu6MwOFn/t6+ISA==
   dependencies:
-    graphql-playground-html "1.6.25"
+    graphql-playground-html "^1.6.27"
 
 graphql-request@^1.5.0:
   version "1.8.2"
@@ -10263,9 +10263,9 @@ opn@^5.5.0:
     is-wsl "^1.1.0"
 
 optimize-css-assets-webpack-plugin@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.3.tgz#e2f1d4d94ad8c0af8967ebd7cf138dcb1ef14572"
-  integrity sha512-q9fbvCRS6EYtUKKSwI87qm2IxlyJK5b4dygW1rKUBT6mMDhdG5e5bZT63v6tnJR9F9FB/H5a0HTmtw+laUBxKA==
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.4.tgz#85883c6528aaa02e30bbad9908c92926bb52dc90"
+  integrity sha512-wqd6FdI2a5/FdoiCNNkEvLeA//lHHfG24Ln2Xm2qqdIk4aOlsR18jwpyOihqQ8849W3qu2DX8fOYxpvTMj+93A==
   dependencies:
     cssnano "^4.1.10"
     last-call-webpack-plugin "^3.0.0"
@@ -14484,9 +14484,9 @@ update-notifier@^4.1.0:
     xdg-basedir "^4.0.0"
 
 uri-js@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.2.2.tgz#94c540e1ff772956e2299507c010aea6c8838eb0"
-  integrity sha512-KY9Frmirql91X2Qgjry0Wd4Y+YTdrdZheS8TFwvkbLWf/G5KNJDCh6pKL5OZctEW4+0Baa5idK2ZQuELRwPznQ==
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.0.tgz#aa714261de793e8a82347a7bcc9ce74e86f28602"
+  integrity sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   dependencies:
     punycode "^2.1.0"
 
