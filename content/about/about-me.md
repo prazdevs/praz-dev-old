@@ -35,7 +35,7 @@ stack:
           { name: 'Jest', link: 'https://jestjs.io/' },
           { name: 'Cypress', link: 'https://cypress.io/' },
           { name: 'ESLint', link: 'https://eslint.org/' },
-          { name: 'Yarn', link: 'https://yarnpkg.com/' },
+          { name: 'Storybook', link: 'https://storybook.js.org/' },
         ],
     },
   ]

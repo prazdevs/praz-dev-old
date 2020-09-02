@@ -2,14 +2,13 @@
 title: FoxFam League
 category: projects
 tags:
-  - TypeScript
-  - NodeJs
-  - NestJs
-  - MongoDB
+  - React
+  - Firebase
 thumbnail: ../images/fox-fam.png
-link: https://github.com/prazdevs/foxfam-league
+link: https://github.com/prazdevs/foxfam-next
 maintained: true
 ---
 
-A webapp made for streamer [Vicksy](https://twitch.tv/vicksy)'s community to organize a League of Legends tournament between members of the community. It implements account creation and summoner verification through calls to the [Riot Games API](https://developer.riotgames.com/).
-The backend relies on a RESTful API built on top of the NestJs framework.
+A webapp made for streamer [Vicksy](https://twitch.tv/vicksy)'s community to organize a League of Legends tournament between members of the community. The app is built on top of Firebase. 
+
+The goal of the app is to build a complex React app, with all the UX/UI concepts it brings, as well as accessibility concerns.
