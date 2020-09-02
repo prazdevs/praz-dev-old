@@ -47,7 +47,7 @@ timeline:
         {
           text: 'Released and deployed ZoeBot4 to production',
           date: 'Aug. 2020',
-          tag: 'project
+          tag: 'project'
         },
         {
           text: 'Started writing my dev blog and sharing my love of Javascript',
