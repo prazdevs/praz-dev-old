@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
-import CardList from '../components/card-list/card-list.component';
-import InfoBlock from '../components/info-block/info-block.component';
-import SEO from '../components/seo';
-import TagFilter from '../components/tag-filter/tag-filter.component';
-import Layout from '../layout/layout';
+import CardList from '../components/card-list/CardList';
+import InfoBlock from '../components/info-block/InfoBlock';
+import SEO from '../components/Seo';
+import TagFilter from '../components/tag-filter/TagFilter';
+import Layout from '../layout/Layout';
 
 export default ({ data }) => {
   const [selectedTags, setSelectedTags] = useState([]);

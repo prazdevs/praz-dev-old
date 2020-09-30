@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import React, { useState } from 'react';
 
-import Tag from '../tag/tag.component';
+import Tag from '../tag/Tag';
 
 const Card = ({ title, thumbnail, date, read, tags, link }) => {
   const [hovered, setHovered] = useState(false);

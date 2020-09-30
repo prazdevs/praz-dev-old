@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Tag from '../tag/tag.component';
+import Tag from '../tag/Tag';
 
 const TagFilter = ({ tags, handleTagClick }) => {
   return (

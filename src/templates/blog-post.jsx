@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import PostHeader from '../components/post-header/post-header.component';
-import SEO from '../components/seo';
-import Layout from '../layout/layout';
+import PostHeader from '../components/post-header/PostHeader';
+import SEO from '../components/Seo';
+import Layout from '../layout/Layout';
 
 export default ({ data }) => {
   const post = data.markdownRemark;

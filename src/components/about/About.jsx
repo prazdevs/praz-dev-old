@@ -1,8 +1,8 @@
 import React from 'react';
 
-import InfoBlock from '../info-block/info-block.component';
-import TechIcon from '../tech-icon/tech-icon.component';
-import Timeline from '../timeline/timeline.component';
+import InfoBlock from '../info-block/InfoBlock';
+import TechIcon from '../tech-icon/TechIcon';
+import Timeline from '../timeline/Timeline';
 
 const About = ({ about, stack, timeline, text }) => {
   return (

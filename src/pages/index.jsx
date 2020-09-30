@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import CardList from '../components/card-list/card-list.component';
-import InfoBlock from '../components/info-block/info-block.component';
-import Intro from '../components/intro/intro.component';
-import SEO from '../components/seo';
-import Layout from '../layout/layout';
+import CardList from '../components/card-list/CardList';
+import InfoBlock from '../components/info-block/InfoBlock';
+import Intro from '../components/intro/Intro';
+import SEO from '../components/Seo';
+import Layout from '../layout/Layout';
 
 export default ({ data }) => {
   const posts = data.posts.edges.map(({ node }) => ({

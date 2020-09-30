@@ -3,8 +3,8 @@ import '../scss/main.scss';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
-import Footer from '../components/footer/footer.component';
-import Nav from '../components/nav/nav.component';
+import Footer from '../components/footer/Footer';
+import Nav from '../components/nav/Nav';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -1,7 +1,7 @@
 import Img from 'gatsby-image';
 import React, { useState } from 'react';
 
-import Tag from '../tag/tag.component';
+import Tag from '../tag/Tag';
 
 const Project = ({ title, tags, thumbnail, link, content, maintained }) => {
   const [hovered, setHovered] = useState(false);

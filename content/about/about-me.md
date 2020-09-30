@@ -22,7 +22,6 @@ stack:
           { name: 'Redux', link: 'https://redux.js.org/' },
           { name: 'Gatsby', link: 'https://www.gatsbyjs.org/' },
           { name: 'Vue', link: 'https://vuejs.org/' },
-          { name: 'Nuxt', link: 'https://nuxtjs.org/' },
           { name: 'Sass', link: 'https://sass-lang.com/' },
         ],
     },
@@ -35,7 +34,6 @@ stack:
           { name: 'Jest', link: 'https://jestjs.io/' },
           { name: 'Cypress', link: 'https://cypress.io/' },
           { name: 'ESLint', link: 'https://eslint.org/' },
-          { name: 'Storybook', link: 'https://storybook.js.org/' },
         ],
     },
   ]
@@ -73,4 +71,4 @@ timeline:
   }
 ---
 
-I'm Sacha 'PraZ' Bouillez, a 24 year-old **developer** based in **Lille, FR**. I aim to share my **love** and **passion** for **beautiful code** and **good practices**. I always keep a **positive** and **pragmatic** mindset, leading me to remain **curious** and constantly **learning**.
+I'm Sacha 'PraZ' Bouillez, a 24 year-old **developer** based in **Lille, FR**. I aim to share my **love** and **passion** for **beautiful code** and **good practices**. I always keep a **positive** and **pragmatic** mindset, leading me to remain **curious** and constantly **learning**. In my free time, I like **playing games**, **drawing** and **crafting things**. I am very interested in **Japanese culture** and I probably have an unhealthy addiction to **mechanical keyboards**.

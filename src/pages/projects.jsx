@@ -1,10 +1,10 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import InfoBlock from '../components/info-block/info-block.component';
-import Project from '../components/project/project.component';
-import SEO from '../components/seo';
-import Layout from '../layout/layout';
+import InfoBlock from '../components/info-block/InfoBlock';
+import Project from '../components/project/Project';
+import SEO from '../components/Seo';
+import Layout from '../layout/Layout';
 
 export default ({ data }) => {
   const maintainedProjects = data.maintainedProjects.edges.map(({ node }) => ({

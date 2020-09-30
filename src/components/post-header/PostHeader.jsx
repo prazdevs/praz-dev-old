@@ -1,7 +1,7 @@
 import Img from 'gatsby-image';
 import React from 'react';
 
-import Tag from '../tag/tag.component';
+import Tag from '../tag/Tag';
 
 const PostHeader = ({ title, read, date, tags, thumbnail }) => {
   return (

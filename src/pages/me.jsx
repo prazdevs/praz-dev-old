@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import About from '../components/about/about.component';
-import SEO from '../components/seo';
-import Layout from '../layout/layout';
+import About from '../components/about/About';
+import SEO from '../components/Seo';
+import Layout from '../layout/Layout';
 
 export default ({ data }) => {
   const about = data.about.html;

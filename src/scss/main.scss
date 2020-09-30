@@ -41,22 +41,22 @@
 // Custom Components
 //==============================================================================
 
-@import '../components/footer/footer.styles';
-@import '../components/nav/nav.styles';
-@import '../components/intro/intro.styles';
-@import '../components/card/card.styles';
-@import '../components/card-list/card-list.styles';
-@import '../components/tag/tag.styles';
-@import '../components/info-block/info-block.styles';
-@import '../components/post-header/post-header.styles';
-@import '../components/project/project.styles';
-@import '../components/tag-filter/tag-filter.styles';
-@import '../components/about/about.styles';
-@import '../components/tech-icon/tech-icon.styles';
-@import '../components//timeline/timeline.styles.scss';
-@import '../components/timeline/timeline-item.styles.scss';
+@import '../components/footer/footer';
+@import '../components/nav/nav';
+@import '../components/intro/intro';
+@import '../components/card/card';
+@import '../components/card-list/card-list';
+@import '../components/tag/tag';
+@import '../components/info-block/info-block';
+@import '../components/post-header/post-header';
+@import '../components/project/project';
+@import '../components/tag-filter/tag-filter';
+@import '../components/about/about';
+@import '../components/tech-icon/tech-icon';
+@import '../components//timeline/timeline.scss';
+@import '../components/timeline/timeline-item.scss';
 
 //==============================================================================
 // Glyphs
 //==============================================================================
-@import './_icons';
+@import './icons';

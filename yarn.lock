@@ -14134,6 +14134,16 @@ typeface-jetbrains-mono@^2.0.0:
   resolved "https://registry.yarnpkg.com/typeface-jetbrains-mono/-/typeface-jetbrains-mono-2.0.0.tgz#f522311d18ae5681efce1699a99225b525b82e29"
   integrity sha512-QrIlq+Jtn5ghF0RUSa6WubXro+DmtBOC9M+YQeODd1fW31jPzvY1qRM0qiarIelLgoj4ytWrj6iXCPxcbDWavw==
 
+typeface-neucha@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-neucha/-/typeface-neucha-0.0.72.tgz#2051b9b2d1ad82333991103d5a3ab71b528c9839"
+  integrity sha512-a5zjjJM4Du+b5XAEtN+5HM3qMG3FZ5nNjDl9jcWNqGeEQ6oY/oAwX6wOVlJnoLaSbby5ipb1oaybcCIMOx+x5g==
+
+typeface-patrick-hand@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-patrick-hand/-/typeface-patrick-hand-0.0.72.tgz#4e7b41c65dd00672f593994624ebc76bf7e1b287"
+  integrity sha512-eO6x813iO1+ka1jCgQAHLoyxUSSpSqNts65rPUYGjmJ8WUNzrF5Q/tuEWYe8yJxBm6WIT10W+vDCjIenYyZAyQ==
+
 typeface-quicksand@^1.1.3:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/typeface-quicksand/-/typeface-quicksand-1.1.4.tgz#69ba3efca02575699c36681e718651052bdec0a6"
