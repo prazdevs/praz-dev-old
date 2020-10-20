@@ -22,7 +22,6 @@ stack:
           { name: 'Redux', link: 'https://redux.js.org/' },
           { name: 'Gatsby', link: 'https://www.gatsbyjs.org/' },
           { name: 'Vue', link: 'https://vuejs.org/' },
-          { name: 'Nuxt', link: 'https://nuxtjs.org/' },
           { name: 'Sass', link: 'https://sass-lang.com/' },
         ],
     },
@@ -35,7 +34,6 @@ stack:
           { name: 'Jest', link: 'https://jestjs.io/' },
           { name: 'Cypress', link: 'https://cypress.io/' },
           { name: 'ESLint', link: 'https://eslint.org/' },
-          { name: 'Yarn', link: 'https://yarnpkg.com/' },
         ],
     },
   ]
@@ -44,6 +42,11 @@ timeline:
     text: 'In the following timeline, I try to keep track of impactful events that made me the developer I am today.',
     events:
       [
+        {
+          text: 'Released and deployed ZoeBot4 to production',
+          date: 'Aug. 2020',
+          tag: 'project'
+        },
         {
           text: 'Started writing my dev blog and sharing my love of Javascript',
           date: 'Dec. 2020',
@@ -68,4 +71,4 @@ timeline:
   }
 ---
 
-I'm Sacha 'PraZ' Bouillez, a 24 year-old **developer** based in **Lille, FR**. I aim to share my **love** and **passion** for **beautiful code** and **good practices**. I always keep a **positive** and **pragmatic** mindset, leading me to remain **curious** and constantly **learning**. I work hard to make the web **accessible for everyone** and a **better experience**.
+I'm Sacha 'PraZ' Bouillez, a 24 year-old **developer** based in **Lille, FR**. I aim to share my **love** and **passion** for **beautiful code** and **good practices**. I always keep a **positive** and **pragmatic** mindset, leading me to remain **curious** and constantly **learning**. In my free time, I like **playing games**, **drawing** and **crafting things**. I am very interested in **Japanese culture** and I probably have an unhealthy addiction to **mechanical keyboards**.
